@@ -45,13 +45,12 @@ The project can be deployed using _either_ Bicep _or_ Terraform.
 
 ### Deploy the Function App Code
 
-The project provides sample Azure Function code to verify that the solution is working correctly.
+The project provides sample Azure Function code to verify that the solution is working correctly. It contains an Event Hub triggered Azure Function used to process incoming messages and a second, disabled, timer triggered Azure Function that sends messages to the Event Hub using output bindings and is used to test that the processor is operating properly.
 
 1. Navigate to the [./src/eventhub-trigger](./src/eventhub-trigger) directory.
 2. Deploy the code to the function app provisioned by Bicep or Terraform - `func azure functionapp publish <FUNCTION_APP_NAME> --dotnet`
 
 ### Test the Event Hub and Function App
-TODO
 
 1. Navigate to the [Azure Portal](https://portal.azure.com) and find the Function App that was provisioned.
 1. Open the **Configuration** blade.
