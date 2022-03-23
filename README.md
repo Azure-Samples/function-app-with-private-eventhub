@@ -68,4 +68,5 @@ The project provides sample Azure Functions code to verify that the solution is 
 * [Azure Functions networking options](https://docs.microsoft.com/azure/azure-functions/functions-networking-options)
 * [Network security for Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs/network-security)
 * [Configure Azure Storage firewalls and virtual networks](https://docs.microsoft.com/azure/storage/common/storage-network-security)
+* [Configure Azure Key Vault firewalls and virtual networks](https://docs.microsoft.com/en-us/azure/key-vault/general/network-security)
 * [Analyze Azure Functions telemetry in Application Insights](https://docs.microsoft.com/azure/azure-functions/analyze-telemetry-data)
