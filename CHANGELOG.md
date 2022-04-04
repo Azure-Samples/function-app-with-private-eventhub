@@ -1,4 +1,4 @@
-## Function App With Private Event Hub Changelog
+## Function App with Private Event Hub Changelog
 
 <a name="2022.03.22"></a>
 # 2022.03.22 (2022-03-22)

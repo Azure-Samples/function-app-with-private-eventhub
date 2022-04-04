@@ -1,4 +1,4 @@
-# Function App With Private Event Hub
+# Function App with Private Event Hub
 
 Integration between Event Hubs and Azure Virtual Networks creates a secure messaging layer that can be accessed from other services within the network. Azure Functions can be similarly integrated with services inside virtual networks, enabling creation of workloads that execute on message ingestion, through input bindings.
 
@@ -53,13 +53,13 @@ The project provides sample Azure Functions code to verify that the solution is 
 ### Test the Event Hub and Function App
 
 1. Navigate to the [Azure Portal](https://portal.azure.com) and find the Function App that was provisioned.
-1. Open the **Configuration** blade.
-1. Find the `AzureWebJobs.Tester.Disabled` application setting and edit the value to `false`.
-1. Save the changes.
-1. Find the Application Insights resource that was provisioned.
-1. Open the **Logs** blade.
-1. Query for the results from the `requests` table.
-1. Observe the successful `EventHubProcessor` runs.
+2. Open the **Configuration** blade.
+3. Find the `AzureWebJobs.Tester.Disabled` application setting and edit the value to `false`.
+4. Save the changes.
+5. Find the Application Insights resource that was provisioned.
+6. Open the **Logs** blade.
+7. Query for the results from the `requests` table.
+8. Observe the successful `EventHubProcessor` runs.
 
 ## Resources
 
