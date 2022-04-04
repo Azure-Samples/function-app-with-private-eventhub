@@ -27,19 +27,19 @@ resource "azurerm_eventhub" "evh" {
   message_retention   = var.azurerm_eventhub_message_retention
 }
 
-resource "azurerm_private_dns_zone" "evhns-private-link" {
+resource "azurerm_private_dns_zone" "evhns_private_link" {
   name                = "privatelink.servicebus.windows.net"
   resource_group_name = var.resource_group_name
 }
 
-resource "azurerm_private_dns_zone_virtual_network_link" "evhns-private-link" {
+resource "azurerm_private_dns_zone_virtual_network_link" "evhns_private_link" {
   name                  = "servicebus_privatelink"
   resource_group_name   = var.resource_group_name
-  private_dns_zone_name = azurerm_private_dns_zone.evhns-private-link.name
+  private_dns_zone_name = azurerm_private_dns_zone.evhns_private_link.name
   virtual_network_id    = var.azurerm_private_dns_zone_virtual_network_id
 }
 
-resource "azurerm_private_endpoint" "evhns-private-endpoint" {
+resource "azurerm_private_endpoint" "evhns_private_endpoint" {
   name                = var.azurerm_private_endpoint_evhns_private_endpoint_name
   resource_group_name = var.resource_group_name
   location            = var.location
@@ -54,6 +54,6 @@ resource "azurerm_private_endpoint" "evhns-private-endpoint" {
 
   private_dns_zone_group {
     name                 = "event-hub-private-dns-zone-group"
-    private_dns_zone_ids = [azurerm_private_dns_zone.evhns-private-link.id]
+    private_dns_zone_ids = [azurerm_private_dns_zone.evhns_private_link.id]
   }
 }

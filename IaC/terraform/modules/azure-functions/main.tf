@@ -46,7 +46,7 @@ resource "azurerm_function_app" "func" {
   }
 }
 
-resource "azurerm_app_service_virtual_network_swift_connection" "fn-vnet-swift" {
+resource "azurerm_app_service_virtual_network_swift_connection" "fn_vnet_swift" {
   app_service_id = azurerm_function_app.func.id
   subnet_id      = var.azurerm_app_service_virtual_network_swift_connection_subnet_id
 }
