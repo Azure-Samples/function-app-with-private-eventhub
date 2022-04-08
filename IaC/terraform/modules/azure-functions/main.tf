@@ -31,7 +31,7 @@ resource "azurerm_function_app" "func" {
   site_config {
     pre_warmed_instance_count        = 1
     runtime_scale_monitoring_enabled = true
-    vnet_route_all_enabled           = true
+    vnet_route_all_enabled           = false
     ftps_state                       = "Disabled"
   }
 

@@ -119,7 +119,7 @@ module azureFunctions './modules/azure-functions.bicep' = {
   params: {
     location: location
     virtualNetworkSubnetId: network.outputs.subnetAppServiceIntId
-    vnetRouteAllEnabled: true
+    vnetRouteAllEnabled: false
     resourceBaseName: baseName
     azureFunctionAppName: azureFunctionAppName
   }
