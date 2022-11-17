@@ -172,12 +172,6 @@ resource "azurerm_key_vault_access_policy" "kv_func_access_policy" {
   ]
 }
 
-resource "azurerm_key_vault_secret" "appi_instrumentation_key" {
-  name         = "kvs-${local.base_name}-aikey"
-  value        = module.app_insights.instrumentation_key
-  key_vault_id = module.private_key_vault.key_vault_id
-}
-
 resource "azurerm_key_vault_secret" "evh_connection_string" {
   name         = "kvs-${local.base_name}-evhconn"
   value        = module.private_event_hub.event_hub_details.connection_string
