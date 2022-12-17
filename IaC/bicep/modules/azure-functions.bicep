@@ -47,7 +47,7 @@ resource azureFunction 'Microsoft.Web/sites@2020-12-01' = {
       appSettings: [
         {
           name: 'FUNCTIONS_EXTENSION_VERSION'
-          value: '~3'
+          value: '~4'
         }
       ]
     }
